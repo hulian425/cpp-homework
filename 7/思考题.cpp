@@ -34,11 +34,13 @@ Pat::Pat()
 }
 void Pat::Print_pat()
 {
-	for (int i = 0; i < N + 1; i++)
+	for (int i = 0; i < N + 1; i++) {
+		cout << "                                        ";
 		for (int j = 0; j < N + 1; j++)
 		{
 			printf("%C%C", m[i][j], j == N ? '\n' : 0);
 		}
+	}
 }
 
 void Pat::Move(int opt)
@@ -52,6 +54,7 @@ void Pat::Move(int opt)
 					if (i == 1)
 					{
 						Print_pat();
+						cout << "                                        ";
 						cout << "sorry, you can't move" << endl;
 						return;
 					}
@@ -69,6 +72,7 @@ void Pat::Move(int opt)
 					if (j == 1)
 					{
 						Print_pat();
+						cout << "                                        ";
 						cout << "sorry,you can't move" << endl;
 						return;
 					}
@@ -86,6 +90,7 @@ void Pat::Move(int opt)
 					if (i == N - 1)
 					{
 						Print_pat();
+						cout << "                                        ";
 						cout << "sorry,you can't move" << endl;
 						return;
 					}
@@ -103,6 +108,7 @@ void Pat::Move(int opt)
 					if (j == N - 1)
 					{
 						Print_pat();
+						cout << "                                        ";
 						cout << "sorry,you can't move" << endl;
 						return;
 					}
