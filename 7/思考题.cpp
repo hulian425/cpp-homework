@@ -14,16 +14,16 @@ public:
 	void Print_pat();
 	void Move(int opt);
 private:
-	char m[20][20];
+	char m[N + 1][N + 1];
 };
 Pat::Pat()
 {
-	for (int i = 0; i < 20; i++)
-		for (int j = 0; j < 20; j++)
+	for (int i = 0; i < N + 1; i++)
+		for (int j = 0; j < N + 1; j++)
 		{
 			m[i][j] = ' ';
-			if (i == 0 || i == 19) m[i][j] = '#';
-			else if (j == 0 || j == 19) m[i][j] = '#';
+			if (i == 0 || i == N) m[i][j] = '#';
+			else if (j == 0 || j == N) m[i][j] = '#';
 		}
 	m[1][3] = '*';
 	m[2][2] = '*'; m[2][4] = '*';
@@ -35,9 +35,9 @@ Pat::Pat()
 void Pat::Print_pat()
 {
 	for (int i = 0; i < N + 1; i++)
-		for (int j = 0; j < 20; j++)
+		for (int j = 0; j < N + 1; j++)
 		{
-			printf("%C%C", m[i][j], j == 19 ? '\n' : 0);
+			printf("%C%C", m[i][j], j == N ? '\n' : 0);
 		}
 }
 
