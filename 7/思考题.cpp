@@ -96,11 +96,13 @@ int main()
 {
     Pat x;
     x.Print_pat();
+    while(true){
+        char opt[2];
+        cin >> opt;
 
-    int opt;
-    cin >> opt;
-    system("cls");
-    x.Move(opt);
-    x.Print_pat();
+        system("cls");
+        x.Move(opt[0]);
+        x.Print_pat();
+    }
 
 }
