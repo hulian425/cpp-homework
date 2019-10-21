@@ -16,7 +16,7 @@ int main () {
     std::cout << myints[0] << ' ' << myints[1] << ' ' << myints[2] << '\n';
   } while ( std::next_permutation(myints,myints+3) );
   // true if the function could rearrange the object as a lexicographicaly greater permutation.
-Otherwise, the function returns false 
+// Otherwise, the function returns false 
 
   std::cout << "After loop: " << myints[0] << ' ' << myints[1] << ' ' << myints[2] << '\n';
 
