@@ -1,0 +1,13 @@
+
+实现一个MatrixofPoint类，与ArrayofPoint类似，整体new或分开new的方式均可，并在main中测试。
+
+分别实现4个函数，类似strlen，strcpy，strupr，strcat，函数内不得使用任何库函数。
+
+实现一个函数，能把字符串中所有的'a'字符去掉。如"wa-156kjuax"，处理后成"w-156kjux"。
+
+求两个字符串的交集，如"hello"和"look"的交集为"lo"。
+
+求两个字符串的合集，如"hello"和"look"的合集为"helok"。
+
+实现Mystring类，它类似C++中的string类，请实现Mystring类的构造函数、析构函数、拷贝构造函数及你能想到的成员函数。
+
