@@ -63,6 +63,12 @@ public:
 		x += 1;
 	}
 	
+	MyInt operator + (const MyInt & _int)
+	{
+		MyInt t;
+		t.x = x + _int.x;
+		return t;
+	}
 private:
 	int x;
 };
@@ -89,5 +95,7 @@ int main()
 	a = 1, b = 2, c = 3;
 	a = b = c;
 	cout << "a = " << a  << " b = " <<b <<endl; 
+	c = a + b + c;
+	cout << "c = a + b + c " << c << endl;
 	system("pause");
 }
