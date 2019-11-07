@@ -10,13 +10,19 @@ public:
 	MyInt(int _x = 0){
 		x = _x;
 	}
-	void operator = (int _x)
+	MyInt operator = (int _x)
 	{
+		MyInt t;
 		x = _x;
+		t.x = x;
+		return t;
 	}
-	void operator = (MyInt _x)
+	MyInt& operator = (MyInt _x)
 	{
+		MyInt t;
 		x = _x.x;
+		t.x = x;
+		return t;
 	}
 	bool operator == (const MyInt &_x)const
 	{
@@ -80,5 +86,8 @@ int main()
 
 	a++;
 	cout << "a++ a = " << a << endl;
+	a = 1, b = 2, c = 3;
+	a = b = c;
+	cout << "a = " << a  << " b = " <<b <<endl; 
 	system("pause");
 }
